@@ -43,7 +43,43 @@ def binarySearch():
             else:
                 median+=1
 
-binarySearch()
+#binarySearch()
+
+def linearSearch():
+    list=[1, 2, 3, 4, 5, 6, 7, 8, 9 , 10]
+    n = 0
+
+    target = int(input("What number are you searching for? "))
+
+    for x in range(len(list)):
+        if list[n] == target:
+            print("Found")
+            break
+        else:
+            n +=1
+
+#linearSearch()
+
+def bubbleSort():
+    list2 = [7, 6, 4, 2] #List to be sorted
+    listSorted = [2, 4, 6, 7] #Sorted list for comparison
+
+    pos = 0 #Index place in index
+    isSorted = False
+
+    while isSorted == False:
+        if list2[pos] > list2[pos + 1]:
+            list2[pos], list2[pos + 1] = list2[pos+1], list2[pos]
+            print(list2)
+            pos +=1
+            if list2[pos] > 3:
+                pos = 0
+        else:
+            pos+=1
+
+        if list2 == listSorted:
+            isSorted = True
+
+bubbleSort()
 
 
-    #for x in range(len(list)):
